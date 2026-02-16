@@ -188,12 +188,12 @@ def search_emails(query: str, max_results: int = 10):
 # =========================
 if __name__ == "__main__":
     # For testing:
-    print("=== Testing list_emails ===")
-    emails = list_emails_logic(3)
-    for email in emails:
-        print(f"\nFrom: {email['from']}")
-        print(f"Subject: {email['subject']}")
-        print(f"Date: {email['date']}")
+    # print("=== Testing list_emails ===")
+    # emails = list_emails_logic(3)
+    # for email in emails:
+    #     print(f"\nFrom: {email['from']}")
+    #     print(f"Subject: {email['subject']}")
+    #     print(f"Date: {email['date']}")
     
     # To run MCP server, uncomment:
-    # mcp.run()
+    mcp.run()

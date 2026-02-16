@@ -19,6 +19,7 @@ dependencies = [
     { name = "langchain-groq" },
     { name = "litellm" },
     { name = "lxml-html-clean" },
+    { name = "mcp" },
     { name = "newspaper3k" },
     { name = "readability-lxml" },
 ]
@@ -37,6 +38,7 @@ requires-dist = [
     { name = "langchain-groq", specifier = ">=1.1.2" },
     { name = "litellm", specifier = ">=1.81.12" },
     { name = "lxml-html-clean", specifier = ">=0.4.3" },
+    { name = "mcp", specifier = ">=1.26.0" },
     { name = "newspaper3k", specifier = ">=0.2.8" },
     { name = "readability-lxml", specifier = ">=0.8.4.1" },
 ]

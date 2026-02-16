@@ -5,7 +5,7 @@ from mcp_servers.news_server.tools import get_filtered_news_logic
 if __name__ == "__main__":
 
     topic = "agentic ai"
-    recipient_email = "shitaniruddha92@gmail.com"
+    recipient_email = "aniruddhashit08@gmail.com"
 
     print("\n========== FETCHING NEWS ==========\n")
 

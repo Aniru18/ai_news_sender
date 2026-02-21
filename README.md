@@ -265,7 +265,7 @@ Below are screenshots of the Streamlit frontend demonstrating how the system wor
 ### 📧 3️⃣ Email Sent Confirmation
 
 ![Email UI](assets/p3.png)
-![Recieved mail](assets/p4.png)
+![Recieved mail](assets/p4.jpeg)
 
 **Description:**
 - Sends the generated summary to the user’s email
@@ -287,7 +287,7 @@ The system behaves intelligently:
 
 No duplicate generation. No dummy emails.
 
----
+
 
 ---
 # 📦 Installation
@@ -364,4 +364,5 @@ OR
 **Aniruddha Shit**  
 AI Enthusiast  
 India 🇮🇳
+
 

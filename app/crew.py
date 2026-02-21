@@ -48,6 +48,8 @@
 #     )
 
 #     return crew
+import os
+# os.environ["CREWAI_TRACING_ENABLED"] = "false"
 from crewai import Crew, Process
 from app.tools import news_tool, mail_tool
 from app.agents import (
@@ -63,22 +65,28 @@ from app.tasks import (
 )
 
 
-
-def build_crew(topic: str, recipient_email: str):
+def build_crew(topic: str, recipient_email: str = None, 
+               send_email: bool = False):
 
     news_agent = get_news_agent(news_tool)
     writer_agent = get_writer_agent()
-    mail_agent = get_mail_agent(mail_tool)
 
     fetch_task = get_fetch_task(news_agent, topic)
     summary_task = get_summary_task(writer_agent)
-    email_task = get_email_task(mail_agent, recipient_email)
+
+    tasks = [fetch_task, summary_task]
+
+    # Only add email task if explicitly requested
+    if send_email and recipient_email:
+        mail_agent = get_mail_agent(mail_tool)
+        email_task = get_email_task(mail_agent, recipient_email)
+        tasks.append(email_task)
 
     crew = Crew(
-        agents=[news_agent, writer_agent, mail_agent],
-        tasks=[fetch_task, summary_task, email_task],
+        agents=[news_agent, writer_agent],
+        tasks=tasks,
         process=Process.sequential,
-        verbose=True
+        verbose=False
     )
 
     return crew

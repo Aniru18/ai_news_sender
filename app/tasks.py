@@ -28,7 +28,7 @@ def get_email_task(mail_agent, recipient_email):
     return Task(
         description=f"""
         Send the generated newsletter to {recipient_email}.
-        Subject: Daily AI News Summary
+        Subject: Daily AI News Summary on the topic mentioned
         """,
         agent=mail_agent,
         expected_output="Email sent confirmation"

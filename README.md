@@ -230,6 +230,66 @@ Add to `.gitignore`:
 
 ---
 
+## 📸 Application UI Preview
+
+Below are screenshots of the Streamlit frontend demonstrating how the system works.
+
+---
+
+### 🖥️ 1️⃣ Home Screen – Topic & Email Input
+
+![Home UI](assets/p1.png)
+
+**Description:**
+- User enters the **news topic**
+- User enters their **email address**
+- Two main actions:
+  - 🔎 Generate Summary
+  - 📧 Send Mail
+
+---
+
+### 📰 2️⃣ Generated News Summary
+
+![Summary UI](assets/p2.png)
+
+**Description:**
+- Displays AI-generated 160-word professional newsletter
+- Clean and readable format
+- Generated using:
+  - MCP News Server (RSS-based fetching)
+  - CrewAI Agent (Newsletter Writer)
+
+---
+
+### 📧 3️⃣ Email Sent Confirmation
+
+![Email UI](assets/p3.png)
+![Recieved mail](assets/p4.png)
+
+**Description:**
+- Sends the generated summary to the user’s email
+- Uses Gmail MCP Server
+- Confirms successful email delivery
+
+---
+
+## 🧠 Smart Workflow Behavior
+
+The system behaves intelligently:
+
+✔ If user clicks **Generate Summary** → Only summary is generated  
+✔ If user clicks **Send Mail after generating** → The same visible summary is sent  
+✔ If user clicks **Send Mail directly** → Entire workflow runs automatically:
+   - Fetch news
+   - Generate summary
+   - Send email
+
+No duplicate generation. No dummy emails.
+
+---
+
+---
 # 📦 Installation
 
 Clone repository:
@@ -304,3 +364,4 @@ OR
 **Aniruddha Shit**  
 AI Enthusiast  
 India 🇮🇳
+

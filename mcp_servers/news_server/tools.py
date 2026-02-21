@@ -1,6 +1,6 @@
 from fastmcp import FastMCP
 from mcp_servers.news_server.services.rss_service import fetch_google_news
-from mcp_servers.news_server.services.cleaner import trim_text, clean_text
+
 
 mcp = FastMCP("news-mcp")
 

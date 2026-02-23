@@ -347,6 +347,131 @@ OR
 
 ---
 
+# Docker Deployment Guide
+
+---
+
+# 🐳 Step 1 – Create Docker Hub Repository
+
+1. Go to https://hub.docker.com
+2. Login to your account
+3. Click **Create Repository**
+4. Repository Name: `ai-news-sender`
+5. Choose Public or Private
+6. Click **Create**
+
+Your repository will look like:
+
+```
+aniruvk18/ai-news-sender
+```
+
+---
+
+# 🛠 Step 2 – Build Docker Image
+
+From project root (where Dockerfile exists):
+
+```bash
+docker build -t aniruvk18/ai-news-sender:v1.1 .
+```
+
+---
+
+# 🚀 Step 3 – Push Image
+
+Login:
+
+```bash
+docker login
+```
+
+Push:
+
+```bash
+docker push aniruvk18/ai-news-sender:v1.1
+```
+
+---
+
+# 📥 Step 4 – Pull Image (On Any Machine)
+
+```bash
+docker pull aniruvk18/ai-news-sender:v1.1
+```
+
+---
+
+
+# 📁 Required Files (MUST EXIST)
+
+In the same folder as `docker-compose.yml`:
+
+```
+docker-compose.yml
+.env
+credentials.json
+token.pickle
+```
+
+---
+
+
+# 🔐 credentials.json
+
+Download from Google Cloud Console (OAuth Client ID)  
+Place it in the same directory.
+
+---
+
+# 📧 token.pickle
+
+Generated after first-time OAuth authentication.
+
+If revoked:
+1. Delete `token.pickle`
+2. Re-authenticate locally
+3. Restart Docker
+
+---
+
+# ▶️ Step 6 – Run Application
+
+```bash
+docker compose up -d
+```
+
+Stop:
+
+```bash
+docker compose down
+```
+
+---
+
+# 🌐 Access Application
+
+Backend API:
+
+```
+http://localhost:8000
+http://localhost:8000/docs
+```
+
+Frontend UI:
+
+```
+http://localhost:8501
+```
+
+---
+
+# 📌 Notes
+- Always authenticate locally once before running inside Docker.
+- Use version tags like `v1.1` instead of `latest`.
+
+---
+
 # 🚀 Key Features
 
 ✔ Agentic AI Architecture  
@@ -355,7 +480,8 @@ OR
 ✔ Clean frontend UI  
 ✔ Production-ready design  
 ✔ No hardcoded emails  
-✔ Fully dynamic workflow  
+✔ Fully dynamic workflow 
+✔ Dockerized Deployment with Container Setup
 
 ---
 
@@ -364,5 +490,6 @@ OR
 **Aniruddha Shit**  
 AI Enthusiast  
 India 🇮🇳
+
 
 

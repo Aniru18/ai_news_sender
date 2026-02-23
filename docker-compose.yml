@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  app:
+    image: aniruvk18/ai-news-sender:v1.1
+    container_name: ai_news_app
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      - ./credentials.json:/app/credentials.json
+      - ./token.json:/app/token.json
+    env_file:
+      - .env
+    restart: always

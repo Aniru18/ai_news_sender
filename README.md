@@ -103,44 +103,6 @@ Crew → Tool → MCP Client → MCP Server → Business Logic
 
 ---
 
-# 📂 Project Structure
-
-```
-ai-news-agent/
-│
-├── app/
-│   ├── agents.py
-│   ├── crew.py
-│   ├── llm.py
-│   ├── main.py
-│   ├── mcp_client.py
-│   ├── tasks.py
-│   ├── tools.py
-│
-├── backend/
-│   └── main.py
-│
-├── frontend/
-│   └── app.py
-│
-├── mcp_servers/
-│   ├── news_server/
-│   │   ├── server.py
-│   │   ├── tools.py
-│   │   └── services/
-│   │       └── rss_service.py
-│   │
-│   ├── mail_server/
-│   │   ├── server.py
-│   │   └── auth.py
-│
-├── credentials.json  ❗ NOT INCLUDED
-├── .env              ❗ NOT INCLUDED
-└── README.md
-```
-
----
-
 # 🛠 Tech Stack
 
 ## 🤖 AI Layer
@@ -491,6 +453,7 @@ http://localhost:8501
 **Aniruddha Shit**  
 AI Enthusiast  
 India 🇮🇳
+
 
 
 

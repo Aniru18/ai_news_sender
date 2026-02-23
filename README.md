@@ -1,5 +1,5 @@
 # 📰 Agentic AI News Summary & Email Sender
-### (CrewAI + MCP + FastAPI + Streamlit)
+### (CrewAI + MCP + FastAPI + Streamlit + Docker)
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
@@ -7,6 +7,7 @@
 ![CrewAI](https://img.shields.io/badge/CrewAI-Agent%20Framework-purple)
 ![MCP](https://img.shields.io/badge/MCP-Microservice%20Protocol-orange)
 ![Groq](https://img.shields.io/badge/Groq-LLM-yellow)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 
 ---
 
@@ -490,6 +491,7 @@ http://localhost:8501
 **Aniruddha Shit**  
 AI Enthusiast  
 India 🇮🇳
+
 
 
 
